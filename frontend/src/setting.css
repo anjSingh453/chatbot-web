@@ -1,0 +1,170 @@
+.settings-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e3e3e3;
+  background-color: #1e1e1e;
+}
+
+.settings-sidebar {
+  width: 250px;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-right: 1px solid #444;
+}
+
+.settings-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.settings-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-sidebar li {
+  padding: 10px;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 5px;
+}
+
+.settings-sidebar li:hover,
+.settings-sidebar li.active {
+  background-color: #3e3e3e;
+  color: #fff;
+}
+
+.settings-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.setting-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.setting-description {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0f9d58;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+
+@media (max-width: 768px) {
+  .settings-container {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #444;
+  }
+
+  .settings-main {
+    padding: 20px;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .settings-sidebar {
+    padding: 15px;
+  }
+
+  .settings-sidebar h2 {
+    font-size: 18px;
+  }
+
+  .settings-main {
+    padding: 15px;
+  }
+
+  .setting-title {
+    font-size: 16px;
+  }
+
+  .setting-description {
+    font-size: 13px;
+  }
+
+  .switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .slider:before {
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+}

@@ -1,0 +1,188 @@
+.sidebar{
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+button span{
+    font-size: 20px;
+}
+
+.history{
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+}
+
+.history li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    border: solid 10px transparent;
+    position: relative;
+}
+
+.history li:hover {
+    background-color: rgba(180, 180, 180, 0.05);
+    border-radius: 10px;
+}
+
+
+.sign {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: solid 0.25px rgba(255, 255, 255, 0.5);
+}
+
+.fa-trash{
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+.history li:hover .fa-trash{
+    opacity: 1;
+    color: #fff;
+}
+
+.fa-trash:hover{
+    color: #f87171 !important;
+}
+
+
+.highlighted {
+    background-color: rgba(180, 180, 180, 0.05);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 260px;
+    }
+
+    button span {
+        font-size: 18px;
+    }
+
+    .history li {
+        font-size: 13px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    .history {
+        display: none; /* hide history on mobile to save space */
+    }
+
+    button {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .sign {
+        display: none; /* hide footer on mobile for space */
+    }
+
+    .logo {
+        height: 20px;
+        width: 20px;
+    }
+
+    button span {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .upgrade-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .upgrade-header p {
+    font-size: 0.95rem;
+  }
+
+  .plan-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .upgrade-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .upgrade-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .upgrade-header p {
+    font-size: 0.9rem;
+  }
+
+  .plan-box {
+    padding: 18px;
+  }
+
+  .plan-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .plan-box ul {
+    font-size: 0.9rem;
+  }
+
+  .upgrade-button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    width: 100%;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;
+  }
+}

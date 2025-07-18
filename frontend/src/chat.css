@@ -1,0 +1,74 @@
+.chats {
+    max-width: 700px;
+    height: 80vh;  
+    overflow-y: auto;
+    padding: 2rem;  
+    margin: auto;   
+}
+
+
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+}
+
+
+.gptDiv {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.userMessage {
+    background-color: #323232;
+    padding: 10px 20px;
+    border-radius: 14px;
+    margin-left: 15rem;
+    max-width: 500px;
+    width: fit-content;
+}
+
+.hljs {
+    border-radius: 14px !important;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+
+@media (max-width: 768px) {
+  .chats {
+    padding: 1rem;
+    max-width: 100%;
+    height: 75vh;
+  }
+
+  .userMessage {
+    margin-left: 2rem;
+    max-width: 90%;
+  }
+
+  .userDiv,
+  .gptDiv {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chats {
+    padding: 1rem 0.5rem;
+  }
+
+  .userMessage {
+    margin-left: 1rem;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .userDiv,
+  .gptDiv {
+    font-size: 0.8rem;
+  }
+}

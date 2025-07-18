@@ -1,0 +1,96 @@
+/* Full-screen dark background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e20;
+  color: #e2e2e2;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Container now spans full width */
+.upgrade-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional: Center inner content with max-width */
+.upgrade-container > * {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Header */
+.upgrade-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.upgrade-header p {
+  font-size: 1rem;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Plan Box */
+.plan-box {
+  background-color: #2a2a2e;
+  border: 1px solid #3b3b3f;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.plan-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.plan-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #cccccc;
+}
+
+/* Plus plan styling */
+.plan-box.plus {
+  background-color: #35353b;
+  border: 1px solid #4c4c54;
+}
+
+.plan-box.plus span {
+  font-weight: normal;
+  color: #9cdbff;
+}
+
+/* Button */
+.upgrade-button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #10a37f;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.upgrade-button:hover {
+  background-color: #0e8e6e;
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}
