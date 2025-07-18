@@ -20,7 +20,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8080/api/signup", {
+      const res = await fetch("https://chatbot-web-x2q0.onrender.com/api/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
