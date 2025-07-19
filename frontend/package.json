@@ -17,6 +17,7 @@
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
     "rehype-highlight": "^7.0.2",
+    "rollup": "^3.29.5",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
