@@ -8,7 +8,7 @@ function Sidebar() {
 
     const getAllThreads = async () => {
         try {
-            const response = await fetch("https://chatbot-web-x2q0.onrender.com/thread");
+            const response = await fetch("https://chatbot-web-x2q0.onrender.com/api/thread");
             const res = await response.json();
             const filteredData = res.map(thread => ({threadId: thread.threadId, title: thread.title}));
             //console.log(filteredData);
