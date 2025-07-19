@@ -33,10 +33,29 @@ const PORT = 8080;
 
 app.use(express.json());
 // app.use(cors());
+// app.use(cors({
+//   origin: "http://localhost:5173",  
+//   credentials: true                 
+// }));
+
+
+const allowedOrigins = [
+  "http://localhost:5173", // local development
+  "https://chatbot-web-3-4ufs.onrender.com", // deployed frontend
+];
+
 app.use(cors({
-  origin: "http://localhost:5173",  
-  credentials: true                 
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 }));
+
+
 app.use(cookieParser());
 
 
